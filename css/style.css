@@ -76,7 +76,7 @@ img {
 .showcase {
     height: 400px;
     background-color: var(--primary-color);
-    background-image: url(/images/jonathan-borba-P4Gml53Btbw-unsplash.jpg);
+    background-image: url(images/jonathan-borba-P4Gml53Btbw-unsplash.jpg);
     background-position: center;
     background-size: cover;
     color: white;
