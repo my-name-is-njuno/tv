@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,300&family=ZCOOL+KuaiLe&display=swap');
+
+:root {
+    --primary-color: #047aed;
+    --secondary-color: #1c3fa8;
+    --dark-color: #002240;
+    --light-color: #f4f4f4;
+    --success-color: #5cb85c;
+    --danger-color: #d9534f;
+}
+
+
+* {
+    box-sizing: border-box; /* seting padding and margin without change of width n height */
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+h1,h2 {
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+p {
+    margin: 10px 0;
+}
+img {
+    width: 100%;
+}
+
+
+
+
+
+
+
+/* navbar */
+.navbar {
+    background: var(--primary-color);
+    color: #fff;
+    height: 70px;
+}
+.navbar .flex {
+    justify-content: space-between;
+}
+.navbar ul {
+    display: flex;
+}
+.navbar a {
+    color: white;
+    padding: 10px;
+    margin: 0 5px;
+}
+.navbar a:hover {
+    border-bottom: 2px #fff solid;
+}
+
+
+/* Showcase */
+.showcase {
+    height: 400px;
+    background-color: var(--primary-color);
+    background-image: url(/images/jonathan-borba-P4Gml53Btbw-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    color: white;
+    position: relative;
+}
+
+.showcase h1 {
+    font-size: 40px;
+}
+.showcase p {
+    margin: 20px 0;
+}
+.showcase .btn:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+.showcase .grid {
+    grid-template-columns: 55% 45%;
+    gap: 30px;
+    overflow: visible;
+}
+.showcase-form {
+    position: relative;
+    top: 60px;
+    height: 350px;
+    width: 400px;
+    padding: 40px;
+    z-index: 100;
+}
+.showcase-form .form-control {
+    margin: 30px 0;
+}
+.showcase-form input[type='text'],
+.showcase-form input[type='email'] {
+    border: 0;
+    border-bottom: 1px solid #b4becb;
+    width: 100%;
+    padding: 3px;
+    font-size: 16px;
+}
+/* .overlay {
+  background-color: rgba(128, 59, 59, 0.5);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+} */
+.showcase-form input:focus {
+    outline: none;
+}
+.showcase::before,
+.showcase::after {
+    content: '';
+    position: absolute;
+    height: 100px;
+    bottom: -70px;
+    right: 0;
+    left: 0;
+    background: #fff;
+    -webkit-transform: skewY(-3deg);
+    -moz-transform: skewY(-3deg);
+    -ms-transform: skewY(-3deg);
+
+}
+
+
+
+
+
+
+
+/* stats */
+.stats {
+    padding-top: 100px;
+}
+.stats-heading {
+    max-width: 500px;
+    margin: auto;
+}
+.stats .grid h3 {
+    font-size: 35px;
+}
+.stats .grid p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+
+/* src  */
+.src .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3 fr);
+}
+.src .grid > *:first-child {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 3;
+}
+
+
+/* action */
+.action .grid {
+    grid-template-columns: 4fr 3fr;
+}
+
+
+/* regions */
+.regions .flex {
+    flex-wrap: wrap;
+}
+.regions .card {
+    text-align: center;
+    margin: 18px 10px 40px;
+    transition: transform 0.2s ease-in;
+}
+.regions.card h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.regions .card:hover {
+    transform: translateY(-15px);
+}
+
+
+/* quick-contacts */
+.quick-contacts {
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+.quick-contacts .flex {
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.secondary-bg {
+    background: #3D4849;
+}
+
+
+
+/* footer */
+.social a {
+    margin: 10px;
+}
+
+
+
+
+
+
+
+
+
+/* services */
+.services-head img{
+    width: 200px;
+    justify-self: flex-end;
+}
+.services-sub-head img {
+    width: 300px;
+    justify-self: flex-end;
+}
+.services-main .card > i {
+    margin-right: 20px;
+}
+.services-main .grid {
+    padding: 30px;
+}
+
+.services-main .grid > *:first-child {
+    grid-column: 1 / span 3;
+}
+.services-main .grid > *:nth-child(2) {
+    grid-column: 1 / span 2;
+}
+
+
+
+/* contacts */
+.contact-head img{
+    width: 200px;
+    justify-self: flex-end;
+}
+.contact-main h3 {
+    margin: 20px 0;
+}
+.contact-main .grid {
+    grid-template-columns: 1fr 2fr;
+    align-items: flex-start;
+}
+.contact-main nav li {
+    font-size: 17px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: #ccc 1px solid;
+}
+.contact-main nav li a:hover {
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* phone */
+@media(max-width: 500px) {
+    .navbar {
+        height: 110px;
+    }
+    .navbar .flex {
+        flex-direction: column;
+    }
+    .navbar ul {
+       padding: 10px;
+       background-color: rgba(0, 0, 0, 0.1); 
+    }
+}
+
+
+/* tablets */
+@media(max-width:768px) {
+    .grid,
+    .showcase .grid ,
+    .stats .grid,
+    .src .grid,
+    .action .grid,
+    .services-main .grid,
+    .contact-main .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    .services-head, .services-sub-head, .contact-head {
+        text-align: center;
+    }
+    .services-head img, .services-sub-head img, .contact-head img {
+        justify-self: center;
+    }
+    .showcase {
+        height: auto;
+    }
+    .showcase-text {
+       text-align: center; 
+       margin-top: 40px;
+    }
+    .showcase-form {
+        justify-self: center;
+        margin: auto;
+    }
+    .src .grid > *:first-child {
+        grid-row: 1;
+        grid-column: 1;
+    }
+    .services-main .grid > *:first-child, 
+    .services-main .grid > *:nth-child(2) {
+        grid-column: 1;
+    }
+    .quick-contacts .flex {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+
+
+
+/* lOADER*/
+.loader-wrapper {
+      font-size: 18px;
+      line-height: 1.6;
+      background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      min-height: 100vh;
+}
+.main {
+    opacity: 0;
+    display: none;
+    transition: opacity 1s ease-in;
+}
+
+.loader {
+  height: 50px;
+  transform-origin: bottom center;
+  animation: rotate 3s linear infinite;
+}
+
+.loader {
+    font-family: 'ZCOOL KuaiLe', cursive;
+  font-size: 40px;
+  color:var(--primary-color);
+}
+
+.loader::after {
+  content: '\2026';
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  animation: dots steps(4, end) 2s infinite;
+  width: 0px;
+}
+
+@keyframes dots {
+  to {
+    width: 1.25em;
+  }
+} 
